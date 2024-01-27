@@ -22,14 +22,14 @@ Ensure the following prerequisites are met:
 
 ## Setup / Installation: 💻
 
-# (1)Fork
+## (1)Fork
 
-# (2)Run Locally
+## (2)Run Locally
 
 ## Clone the project
 
 ```bash
-  git clone https://github.com/github-usernmae/E-commerce-Frontend
+  git clone https://github.com/github-username/E-commerce-Frontend
 ```
 
 ## Go to the project directory
