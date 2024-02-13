@@ -47,7 +47,7 @@ function Checkout(){
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
         <div className="lg:col-span-3">
-        <form className="bg-white px-5">
+        <form className="bg-white px-5 mt-12">
              <div className="space-y-12">
              <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
@@ -184,16 +184,28 @@ function Checkout(){
           <p className="mt-1 text-sm leading-6 text-gray-600">
             Choose from Existing addresses
             </p>
-            <ul role="list" className="divide-y divide-gray-100">
+            <ul role="list">
       {addresses.map((address) => (
-        <li key={address.email} className="flex justify-between gap-x-6 py-5">
+        <li key={address.email} className="flex justify-between gap-x-6 py-5  border-solid border-2 border-gray-200">
           <div className="flex min-w-0 gap-x-4">
+          <input
+                    name="address"
+                    type="radio"
+                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
            <div className="min-w-0 flex-auto">
               <p className="text-sm font-semibold leading-6 text-gray-900">{address.name}</p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{address.phone}</p>
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{address.street}</p>
+              <p className="text-sm leading-6 text-gray-500">{address.pincode}</p>
+            
             </div>
           </div>
          
+          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+            <p className="text-sm leading-6 text-gray-900"> Phone:{address.phone}</p>
+            <p className="text-sm leading-6 text-gray-500">{address.city}</p>
+            
+            </div>
         </li>
       ))}
     </ul>
